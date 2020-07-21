@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			
+		<script src="/resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m,sap.ui.layout,sap.ui.table"
+				data-sap-ui-theme="sap_Belize"
+				data-sap-ui-resourceroots='{
+					"ibm.fin.ar":"./"
+				}'
+				data-sap-ui-bindingSyntax="complex"
+				>
+		</script>
+		<script>
+			//todo : call our compenent.js here to test locally
+			var oCompContainer = new sap.ui.core.ComponentContainer({
+				name : "ibm.fin.ar"
+			});
+			oCompContainer.placeAt("content");
+		</script>
+		
+	</head>
+	
+	<body class="sapUiBody">
+		
+		<div id ="content"></div>
+	      
+	</body>
+</html>

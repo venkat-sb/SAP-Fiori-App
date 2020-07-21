@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ibm.fin.ar.controller.View2"
+	xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:t="sap.ui.table">
+	<Page title="Sub Screen" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<!--<Button text="Back Page" press="onBack"></Button>-->
+			<ObjectHeader intro="{famousFor}" title="{name}" number="{price}" numberUnit="{unit}" icon="{image}"></ObjectHeader>
+			<IconTabBar>
+				<items>
+					<IconTabFilter key="moreData" text="Hotels" icon="sap-icon://bed">
+						<!--<core:Fragment fragmentName="ibm.fin.ar.fragments.moreData" type="XML"></core:Fragment>
+						<core:Fragment fragmentName="ibm.fin.ar.fragments.moreData" type="XML"></core:Fragment>-->
+						<core:Fragment fragmentName="ibm.fin.ar.fragments.FilterBar" type="XML"></core:Fragment>
+					</IconTabFilter>
+					<IconTabFilter key="agency" text="Agency Info" icon="sap-icon://supplier">
+						<core:Fragment fragmentName="ibm.fin.ar.fragments.moreData2" type="XML"></core:Fragment>
+					</IconTabFilter>
+					<IconTabFilter key="city" text="Top Cities" icon="sap-icon://flight">
+						<Select id="simpleSelect" items="{}">
+							<core:Item text="{}" key="{}" press="handleLinkPress"></core:Item>
+						</Select>
+						<t:Table rows="{/cities}" selectionMode="None" visibleRowCount="5">			
+				<t:columns>
+					<t:Column>	
+						<t:label>
+							<Text text = "City"></Text>
+						</t:label>
+						<t:template>
+							<Text text="{name}"></Text>
+						</t:template>	
+					</t:Column>		
+						<t:Column>	
+						<t:label>
+							<Text text = "Rating"></Text>
+						</t:label>
+						<t:template>
+							<RatingIndicator value="{rating}"></RatingIndicator>
+						</t:template>	
+					</t:Column>
+				</t:columns>
+			</t:Table>
+			        </IconTabFilter>
+			</items>
+			</IconTabBar>        
+			
+						
+						<!--<ComboBox id="simple" items="{/cities}">
+							<core:Item text="{name}" key="{name}"></core:Item>
+						</ComboBox>
+						<MultiComboBox id="simple1" items="{/cities}">
+							<core:Item text="{name}" key="{name}"></core:Item>
+						</MultiComboBox>-->
+					
+				
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="Save" press="onSave" type="Accept"></Button>
+				<Button text="Cancel" press="onCancel" type="Reject"></Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
