@@ -3,17 +3,16 @@
 	"sap.app": {
 		"id": "myApp",
 		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
 		},
-		"title": "{{appTitle}}",
-		"description": "{{appDescription}}",
+		
 		"sourceTemplate": {
 			"id": "myApp",
 			"version": "1.40.12"
-		},
-		"tags": {
-			"keywords": ["{{bigData}}", "{{health}}"]
 		}
 	},
 	"sap.ui": {
@@ -22,6 +21,7 @@
 			"desktop": true,
 			"tablet": true,
 			"phone": true
+			
 		},
 		"supportedThemes": ["sap_belize", "sap_bluecrystal"],
 		"icons":{
@@ -81,16 +81,14 @@
 		"models": {
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {},
-				"uri": "i18n/i18n.properties",
-				"preload": true,
-				"async": true
+				"settings": {
+				"bundleName": "ibm.fin.ar.i18n.i18n"
+				}
 			},
 			"": {
 				"type": "sap.ui.model.json.JSONModel",
 				"settings": {},
-				"uri": "model/mockData/bigData.json",
-				"preload": true
+				"uri": "model/mockData/bigData.json"
 			}
 		},
 		"resources": {

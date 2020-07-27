@@ -4,7 +4,32 @@
 		<content>
 			<!--<Button text="Back Page" press="onBack"></Button>-->
 			<ObjectHeader intro="{famousFor}" title="{name}" number="{price}" numberUnit="{unit}" icon="{image}"></ObjectHeader>
-			<IconTabBar>
+		<Carousel class="sapUiContentPadding" loop="true">
+				<pages>
+					<Image alt="Tokyo pictures"
+						 src="https://i.pinimg.com/originals/65/f5/b1/65f5b1bf1a9cd4583f79dc6f34bf1af9.jpg"
+						 height="400px"/>
+					<Image alt="Kyoto Pictures"
+						src="https://wallpaperdata.com/wp-content/uploads/2018/06/lin-mei-159435-unsplash.jpg"
+						height="400px" />
+					<Image alt="Osaka Pictures"
+						src="https://c4.wallpaperflare.com/wallpaper/754/598/409/castle-beauty-japan-lighting-wallpaper-preview.jpg"
+						height="400px"/>
+					<Image alt="Kyoto Pictures"
+						src="https://c4.wallpaperflare.com/wallpaper/687/898/498/kyoto-japan-architecture-cherry-blossom-town-hd-wallpaper-preview.jpg"
+						height="400px"/>
+					<Image alt="Nara Pictures"
+						src="https://i.pinimg.com/originals/56/3e/4e/563e4ef01dc84a0a2775c33a3be98fbd.jpg"
+						height="300px"/>
+					<Image alt="Yokohama Pictures"
+						src="https://wallpaperaccess.com/full/109535.jpg"
+						height="400px"/>
+					<Image alt="Nagoya Pictures"
+						src="https://www.wallpaperflare.com/static/148/699/772/china-rivers-pagoda-architecture-wallpaper.jpg"
+						height="400px"/>
+				</pages>
+			</Carousel>
+		<IconTabBar>
 				<items>
 					<IconTabFilter key="moreData" text="Hotels" icon="sap-icon://bed">
 						<!--<core:Fragment fragmentName="ibm.fin.ar.fragments.moreData" type="XML"></core:Fragment>
@@ -16,41 +41,37 @@
 					</IconTabFilter>
 					<IconTabFilter key="city" text="Top Cities" icon="sap-icon://flight">
 						<Select id="simpleSelect" items="{}">
-							<core:Item text="{}" key="{}" press="handleLinkPress"></core:Item>
+							<core:Item text="{}" key="{}"></core:Item>
 						</Select>
-						<t:Table rows="{/cities}" selectionMode="None" visibleRowCount="5">			
-				<t:columns>
-					<t:Column>	
-						<t:label>
-							<Text text = "City"></Text>
-						</t:label>
-						<t:template>
-							<Text text="{name}"></Text>
-						</t:template>	
-					</t:Column>		
-						<t:Column>	
-						<t:label>
-							<Text text = "Rating"></Text>
-						</t:label>
-						<t:template>
-							<RatingIndicator value="{rating}"></RatingIndicator>
-						</t:template>	
-					</t:Column>
-				</t:columns>
-			</t:Table>
-			        </IconTabFilter>
-			</items>
-			</IconTabBar>        
-			
-						
-						<!--<ComboBox id="simple" items="{/cities}">
+						<t:Table rows="{/cities}" selectionMode="None" visibleRowCount="5">
+							<t:columns>
+								<t:Column>
+									<t:label>
+										<Text text="City"></Text>
+									</t:label>
+									<t:template>
+										<Text text="{name}"></Text>
+									</t:template>
+								</t:Column>
+								<t:Column>
+									<t:label>
+										<Text text="Rating"></Text>
+									</t:label>
+									<t:template>
+										<RatingIndicator value="{rating}"></RatingIndicator>
+									</t:template>
+								</t:Column>
+							</t:columns>
+						</t:Table>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+			<!--<ComboBox id="simple" items="{/cities}">
 							<core:Item text="{name}" key="{name}"></core:Item>
 						</ComboBox>
 						<MultiComboBox id="simple1" items="{/cities}">
 							<core:Item text="{name}" key="{name}"></core:Item>
 						</MultiComboBox>-->
-					
-				
 		</content>
 		<footer>
 			<Toolbar>

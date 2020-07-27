@@ -21,7 +21,7 @@
 						<items>
 							<ObjectListItem  icon="{image}" 
 							intro="{prefecture}" title="{name}" 
-							number="{price}" numberUnit="{unit}" 
+							number="{price}" numberUnit="{unit}"
 							></ObjectListItem>
 							<!--<CustomListItem>
 								<Text text="would you like home delivery"></Text>

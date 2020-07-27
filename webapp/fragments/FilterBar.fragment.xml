@@ -17,7 +17,7 @@
 
 				<fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Price Range" labelTooltip="Tooltip Example" mandatory="true" partOfCurrentVariant="true" visibleInFilterBar="true">
 					<fb:control>
-						<ComboBox type="Text">
+						<ComboBox>
 							<items>
 								<core:Item key="001" text="LOW"/>
 								<core:Item key="002" text="AVERAGE"/>

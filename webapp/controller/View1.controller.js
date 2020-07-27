@@ -22,7 +22,6 @@ sap.ui.define([
 			
 		},
 		uCan : function(oEvent){
-			debugger;
 			var selectedIndex = oEvent.getParameter("arguments").myVal;
 			this.getView().bindElement("/bigData/" + selectedIndex);
 		},
